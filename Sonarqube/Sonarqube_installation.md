@@ -16,16 +16,18 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
 
 1. Download SonarQube [latest verions](https://www.sonarqube.org/downloads/) on to EC2 instance 
    ```sh 
-   cd /opt  
-   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-x.x.zip  
+   cd /opt
+   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.6.zip
    ```
 1. extract packages
    ```sh 
    unzip /opt/sonarqube-x.x.zip
    ```
 
-2. Change ownershipt to the user and Switch to the Linux binaries directory to start the service
+2. Change ownership to the user and Switch to the Linux binaries directory to start the service
    ```bash
+   useradd sonar
+   groupadd sonar
    chown -R <sonar_user>:<sonar_user_group> /opt/sonarqube-x.x  
    cd /opt/sonarqube-x.x/bin/linux-x86-64   
    ./sonar.sh start

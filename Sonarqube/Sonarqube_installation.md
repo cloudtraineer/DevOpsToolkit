@@ -14,7 +14,7 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
 
 ## Installation steps
 
-1. Download SonarQube on to EC2 instance 
+1. Download SonarQube [latest verions](https://www.sonarqube.org/downloads/) on to EC2 instance 
    ```sh 
    cd /opt  
    wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-x.x.zip  

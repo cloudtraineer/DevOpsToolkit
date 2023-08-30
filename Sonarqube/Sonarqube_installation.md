@@ -1,6 +1,6 @@
 # Sonarqube Setup
 
-SonarQube is an open-source static testing analysis software, it is used by developers to manage source code quality and consistency.
+SonarQube is an open-source static testing analysis software, that is used by developers to manage source code quality and consistency.
 ## 🧰 Prerequisites
 
 Source: https://docs.sonarqube.org/latest/requirements/requirements/
@@ -14,7 +14,7 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
 
 ## Installation steps
 
-1. Download SonarQube [latest verions](https://www.sonarqube.org/downloads/) on to EC2 instace 
+1. Download SonarQube on to EC2 instance 
    ```sh 
    cd /opt  
    wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-x.x.zip  
@@ -24,7 +24,7 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    unzip /opt/sonarqube-x.x.zip
    ```
 
-2. Change ownershipt to the user and Switch to Linux binaries directory to start service
+2. Change ownershipt to the user and Switch to the Linux binaries directory to start the service
    ```bash
    chown -R <sonar_user>:<sonar_user_group> /opt/sonarqube-x.x  
    cd /opt/sonarqube-x.x/bin/linux-x86-64   
@@ -35,7 +35,21 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    ```bash
    http://<Public-IP>:9000
    ```
+# Integrate Sonarqube with Jenkins 
 
-## 📌 Who is using this   
-People who want to setup SonarQube and would like to integrate with Jenkins 
+## 🧰 Prerequisites
+1. a Sonarqube Server
+2. A Jenkins server
 
+Steps :- 
+### On Sonarqube server 
+
+1. Generate a sonarqube token to authenticate from Jenkins
+
+### On Jenkins server 
+
+1. Install Sonarqube plugin
+2. Configure Sonarqube credentials
+3. Add Sonarqube to jenkins "configure system"
+4. Install SonarScanner
+5. Run Pipeline job

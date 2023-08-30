@@ -40,12 +40,11 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 - The default Username is `admin`
 - Grab the default password 
 - Password Location:`/var/lib/jenkins/secrets/initialAdminPassword`
-- `Skip` Plugin Installation; _We can do it later_
+- `Install Suggested Plugin` Plugin Installation;
 - Change admin password
    - `Admin` > `Configure` > `Password`
 - Configure `java` path
-  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`  
-- Create another admin user id
+  - `Manage Jenkins` > `Global Tool Configuration` > `JDK` 
 
 ### Test Jenkins Jobs
 1. Create “new item”

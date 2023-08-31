@@ -18,8 +18,7 @@ pipeline{
          }
        stage('Deploy'){
            steps{
-               sh 'cd /var/lib/jenkins/workspace/rrr/target'
-               sh "curl -v -u deployer:deployer -T mynewapp.war http://54.210.64.82:8090/manager/text/deploy?path=/testapp&update=true"
+               sh 'cp /var/lib/jenkins/workspace/rrr/target/*.war /opt/apache-tomcat-8.5.93/webapps/'
            }
        }
     }

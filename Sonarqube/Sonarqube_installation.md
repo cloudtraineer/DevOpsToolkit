@@ -17,22 +17,29 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
 1. Download SonarQube [latest verions](https://www.sonarqube.org/downloads/) on to EC2 instance 
    ```sh 
    cd /opt
-   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.6.zip
+   wget [https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.6.zip](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip)
    ```
 1. extract packages
    ```sh 
-   unzip /opt/sonarqube-x.x.zip
+   unzip /opt/sonarqube-7.9.1.zip
    ```
 
 2. Change ownership to the user and Switch to the Linux binaries directory to start the service
    ```bash
    useradd sonar
    groupadd sonar
-   chown -R <sonar_user>:<sonar_user_group> /opt/sonarqube-x.x  
-   cd /opt/sonarqube-x.x/bin/linux-x86-64   
+   chown -R <sonar_user>:<sonar_user_group> /opt/sonarqube-7.9.1
+   chmod -R 755 /opt/sonarqube-7.9.1
+   
+3. Find the line RUN_AS_USER, uncomment it by removing the pound sign and enter sonar user as the value
+   cd /opt/sonarqube-7.9.1/bin/linux-x86-64
+   vi sonar.sh
+   Edit the following line to match,save the file
+   RUN_AS_USER=sonar
+   Now start the sonar service
    ./sonar.sh start
    ```
-3. Connect to the SonarQube server through the browser. It uses port 9000.   
+5. Connect to the SonarQube server through the browser. It uses port 9000.   
    `Note`: Port should be opened in the Security group 
    ```bash
    http://<Public-IP>:9000

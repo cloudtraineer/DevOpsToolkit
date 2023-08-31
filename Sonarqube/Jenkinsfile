@@ -1,27 +1,26 @@
 pipeline{
     agent any
-    environment {
-        PATH = "$PATH:C:/Program Files/apache-maven-3.8.8/bin"
-    }
     stages{
        stage('GetCode'){
             steps{
                 git 'https://github.com/cloudtraineer/maven_app_deploy.git'
             }
          }        
+       stage('SonarQube analysis') {
+        	steps{
+                sh "mvn sonar:sonar -Dsonar.projectKey=test -Dsonar.host.url=http://54.210.64.82:9000 -Dsonar.login=affe46b2700a9a44e3b8233b797302df7c62f187"
+           }
+        }
        stage('Build'){
             steps{
                 sh 'mvn clean package'
             }
          }
-        stage('SonarQube analysis') {
-        	steps{
-        		withSonarQubeEnv('sonarqube7.9.6') { 
-        			sh "${scannerHome}/bin/sonar-scanner"
-        			sh "mvn sonar:sonar"
-    }
-        }
-        }
-       
+       stage('Deploy'){
+           steps{
+               sh 'cd /var/lib/jenkins/workspace/rrr/target'
+               sh "curl -v -u deployer:deployer -T mynewapp.war http://54.210.64.82:8090/manager/text/deploy?path=/testapp&update=true"
+           }
+       }
     }
 }

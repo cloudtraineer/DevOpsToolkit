@@ -28,7 +28,7 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    ```bash
    useradd sonar
    groupadd sonar
-   chown -R <sonar_user>:<sonar_user_group> /opt/sonarqube-7.9.1
+   chown -R sonar:sonar /opt/sonarqube-7.9.1
    chmod -R 755 /opt/sonarqube-7.9.1
    ```
 3. Find the line RUN_AS_USER, uncomment it by removing the pound sign and enter sonar user as the value

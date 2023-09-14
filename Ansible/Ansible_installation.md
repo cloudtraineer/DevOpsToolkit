@@ -16,7 +16,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    ```
 2. Install ansible using pip check for version
     ```sh
-    pip install ansible
+    amazon-linux-extras install ansible2 -y
     ansible --version
    ```
 ### Note: Steps 3 to 7 are Optional.

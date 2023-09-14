@@ -8,7 +8,13 @@
       name: httpd
       state: installed
     notify: start httpd service
-
+  - name: Create Index file
+    copy:
+      src: index.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
   handlers:   
   - name: start httpd service
     service:

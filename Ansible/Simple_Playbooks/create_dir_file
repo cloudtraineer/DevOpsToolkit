@@ -1,0 +1,11 @@
+---
+- name: playbook to create directory
+  hosts: webservers
+  become: true
+  tasks:
+  - name: creating a file
+    file: 
+      path: /test/test.txt
+      state: touch 
+      mode: 0777
+      owner: ec2-user

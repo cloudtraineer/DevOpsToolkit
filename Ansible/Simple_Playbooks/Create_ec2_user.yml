@@ -1,19 +1,20 @@
-name: Ansible test
-  hosts: localhost
-  become: yes
-  tasks:
-    - name: start an instance with a public IP address
-      amazon.aws.ec2_instance:
-        name: "public-compute-instance"
-        key_name: "ansible-key"
-        region: ap-south-1
-        vpc_subnet_id: subnet-0bf20267a4d00704d
-        instance_type: t2.micro
-        security_group: default
-        network:
-          assign_public_ip: true
-        image_id: ami-0b08bfc6ff7069aff
-        tags:
-          Environment: Testing
-        ec2_access_key: 
-        ec2_secret_key: 
+---
+-  name: Ansible test
+   hosts: localhost
+   become: yes
+   tasks:
+     - name: start an instance with a public IP address
+       amazon.aws.ec2_instance:
+         name: "public-compute-instance"
+         key_name: "ansible-key"
+         region: ap-south-1
+         vpc_subnet_id: subnet-0bf20267a4d00704d
+         instance_type: t2.micro
+         security_group: default
+         network:
+           assign_public_ip: true
+         image_id: ami-0b08bfc6ff7069aff
+         tags:
+           Environment: Testing
+         ec2_access_key: 
+         ec2_secret_key: 

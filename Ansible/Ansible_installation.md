@@ -58,5 +58,5 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    
 1. Run ansible command as ansadmin user it should be successful (Master)
    ```sh 
-   ansible all -m ping
+   ansible all -m ping  or ansible localhost -m ping
    ```

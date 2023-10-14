@@ -15,7 +15,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    sudo yum update –y 
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-   sudo amazon-linux-extras install epel
+   sudo amazon-linux-extras install epel (#no need to run this command on Amazon Linux 2023)
    sudo amazon-linux-extras install java-openjdk11 -y
    sudo yum install jenkins -y
    #In case of Amazon Linux 2023 use below command for instaing java

@@ -8,6 +8,6 @@
    ```
 ## Test Terraform 
 
-    ```sh
+   ```sh
    terraform --version
-```
+   ```

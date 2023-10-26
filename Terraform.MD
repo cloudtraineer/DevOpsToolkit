@@ -7,6 +7,7 @@
    sudo yum -y install terraform
    ```
 ## Test Terraform 
+
     ```sh
    terraform --version
-    ```
+```

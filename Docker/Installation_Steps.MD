@@ -14,7 +14,7 @@
    service docker start
    service docker status
    ```
-2. Create a user called dockeradmin (optional)
+2. Create a user called dockeradmin (Optional)
    ```sh
    useradd dockeradmin
    passwd dockeradmin
@@ -24,7 +24,7 @@
    usermod -aG docker dockeradmin
    ```
 ### Validation test
-1. Create a tomcat docker container by pulling a docker image from the public docker registry
+1. Create an appache docker container by pulling a docker image from the public docker registry
    ```sh
    docker run -d --name test-apache-server -p 80:80 httpd:latest
    ```

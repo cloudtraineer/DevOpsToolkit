@@ -14,13 +14,13 @@
    service docker start
    service docker status
    ```
-1. Create a user called dockeradmin
+2. Create a user called dockeradmin (optional)
    ```sh
    useradd dockeradmin
    passwd dockeradmin
    ```
-1. add a user to docker group to manage docker 
-   ```
+3. add a user to docker group to manage docker (Optional)
+   ``` 
    usermod -aG docker dockeradmin
    ```
 ### Validation test
@@ -43,7 +43,7 @@ Please follow below steps to install docker CE on CentoOS server instance. For R
    lvm2
    ```
   
-1. Use the following command to set up the stable repository.
+2. Use the following command to set up the stable repository.
  
    ```sh 
    sudo yum-config-manager \
@@ -61,12 +61,12 @@ Please follow below steps to install docker CE on CentoOS server instance. For R
    Note: If prompted to accept the GPG key, verify that the fingerprint matches 
 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35, and if so, accept it.
 
-1. Start Docker.
+2. Start Docker.
    ```sh 
    sudo systemctl start docker
    ```
 
-1. Verify that docker is installed correctly by running the hello-world image.
+3. Verify that docker is installed correctly by running the hello-world image.
    ```sh
    sudo docker run hello-world
    ```

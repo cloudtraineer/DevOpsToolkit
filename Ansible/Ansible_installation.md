@@ -11,8 +11,8 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 
 1. Install python and python-pip
    ```sh
-   yum install python
-   yum install python-pip
+   yum install python -y 
+   yum install python-pip -y 
    ```
 2. Install ansible using pip check for version
     ```sh

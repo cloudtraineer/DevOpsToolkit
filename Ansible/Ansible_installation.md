@@ -15,14 +15,14 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    yum install python-pip -y 
    ```
 2. Install ansible using pip check for version
-   Note: For Amazon Linux 2 Ami only
+   > Note: For Amazon Linux 2 Ami only
     ```sh
     amazon-linux-extras install ansible2 -y
     ansible --version
    ```
     
     or
-   Note: For Amazon Linux 2023 Ami only
+   > Note: For Amazon Linux 2023 Ami only
    ```sh
     pip install ansible
     ansible --version

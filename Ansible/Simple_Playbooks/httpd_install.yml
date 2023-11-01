@@ -1,7 +1,8 @@
 ---
 - name: installing httpd
   hosts: webservers
-  become: true
+  become: yes
+  become_method: sudo
   tasks: 
   - name: installing httpd package 
     yum: 

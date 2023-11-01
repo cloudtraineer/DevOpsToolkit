@@ -1,4 +1,4 @@
-#Below is a Sample Ansible Playbook, with basic explanation of the terms used in a playbook 
+### Below is a Sample Ansible Playbook, with basic explanation of the terms used in a playbook 
 
 ```sh
 ---
@@ -9,10 +9,14 @@
   become_user: root
   become_method: sudo
   tasks:
-  - name: creating a directory
-    file:
-      path: /path/to/directory  # Specify the directory path you want to create
-      state: directory
-      mode: 0777  # You can set the appropriate permissions
-      owner: ec2-user
+  - name: task_1
+  - name: task_2
+  
 ```
+> name: A user-friendly name for the playbook.
+  hosts: Specifies the target host or group of hosts (in this case, "webserver").
+  user: Specifies the remote user to use when connecting to the host.
+  become: Indicates that privilege escalation is required.
+  become_user: Specifies the user to become (in this case, "root").
+  become_method: Specifies the method for privilege escalation (in this case, "sudo").
+  tasks: Defines a list of tasks to execute.

@@ -1,4 +1,5 @@
-### Below is a Sample Ansible Playbook, with basic explanation of the terms used in a playbook 
+# Sample Ansible Playbook 
+### Below is a basic explanation of the terms used in a playbook 
 
 ```sh
 ---

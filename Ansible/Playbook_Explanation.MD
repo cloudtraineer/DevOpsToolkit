@@ -13,9 +13,9 @@
   - name: task_2
   
 ```
-> **name**: A user-friendly name for the playbook.
-> **hosts**: Specifies the target host or group of hosts (in this case, "webserver").
-> **user**: Specifies the remote user to use when connecting to the host.
+> **name**: A user-friendly name for the playbook. <br>
+> **hosts**: Specifies the target host or group of hosts (in this case, "webserver").<br>
+> **user**: Specifies the remote user to use when connecting to the host.<br>
 > **become**: Indicates that privilege escalation is required.
 > **become_user**: Specifies the user to become (in this case, "root").
 > **become_method**: Specifies the method for privilege escalation (in this case, "sudo").

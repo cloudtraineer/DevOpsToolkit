@@ -1,0 +1,5 @@
+---
+# defaults file for deploy_httpd
+httpd_service_name: httpd
+httpd_package_name: httpd
+httpd_root_dir: /var/www/html

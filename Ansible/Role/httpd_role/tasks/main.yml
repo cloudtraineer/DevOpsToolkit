@@ -1,0 +1,15 @@
+---
+# tasks file for deploy_httpd
+- name: Update cache and install httpd package
+  become: true
+  yum:
+    name: "{{ httpd_package_name }}"
+    state: present
+
+- name: Copy index.html file to web server root
+  become: true
+  copy:
+    src: files/index.html
+    dest: "{{ httpd_root_dir }}/index.html"
+  notify: restart httpd
+

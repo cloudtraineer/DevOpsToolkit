@@ -1,0 +1,7 @@
+
+---
+- hosts: webserver
+  become: true
+  user : myofcby
+  roles:
+    - httpd_role

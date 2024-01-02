@@ -8,11 +8,14 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 
 ### Prerequisites
 1. EC2 Instance
-     - t2.medium and above
+     - T2.medium and above
      - 30 GB EBS volume
 2. Docker installed and running
 3. Create a user with admin rights
-4. add a newly created user to the docker group
+4. Add the newly created user to the docker group
+   ```sh
+   usermod -aG docker <user_name>
+   ```
 
 ## Install Minikube on EC2
 1. Installation

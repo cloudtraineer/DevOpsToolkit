@@ -93,7 +93,7 @@ sudo service nagios start
 ```
 
 ### Update AWS Security Group
-You need to open port 80 on the new AWS EC2 server to incoming traffic so you can connect to the new Nagios webpage.
+You need to open <b>port 80 </b>on the new AWS EC2 server to incoming traffic so you can connect to the new Nagios webpage.
 
 ### Log in to the Web Interface
 Access the Nagios web interface to do this you will need to know the Public DNS or IP for your instance, you can get this from the Instance section of the EC2 Console if you do not already know it.<br>

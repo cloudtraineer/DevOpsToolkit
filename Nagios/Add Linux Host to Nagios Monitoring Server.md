@@ -136,7 +136,7 @@ define host{
 use                             linux-box               ; Inherit default values from a template
 host_name                       tecmint		        ; The name we're giving to this server
 alias                           CentOS 6                ; A longer name for the server
-address                         5.175.142.66            ; IP address of Remote Linux host
+address                         <IP Address>            ; IP address of Remote Linux host
 }
 ```
 Next open services.cfg file and add the following services to be monitored.

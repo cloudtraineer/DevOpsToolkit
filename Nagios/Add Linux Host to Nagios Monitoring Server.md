@@ -8,8 +8,8 @@ yum install -y gcc glibc glibc-common gd gd-devel make net-snmp openssl-devel ta
 ```
 ### Create Nagios User
 ```sh
-# useradd nagios
-# passwd nagios
+useradd nagios
+passwd nagios
 ```
 ### Downlaod the Nagios Plugins
 ```sh

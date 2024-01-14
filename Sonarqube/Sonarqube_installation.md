@@ -17,7 +17,7 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
 1. Download SonarQube [latest verions](https://www.sonarqube.org/downloads/) on to EC2 instance 
    ```sh 
    cd /opt
-   wget [https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.6.zip](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip)
+   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip
    ```
 1. extract packages
    ```sh 

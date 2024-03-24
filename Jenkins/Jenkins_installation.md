@@ -59,9 +59,9 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. On Jenkins Dashboard click on “new item”
 2. Enter an item name – `My-First-Project`
    - Chose `Freestyle` project
-3. Under the Build section 
-	i. Choose the option 'Execute shell' <br>
-        ii. Enter the command: echo "Welcome to Jenkins Demo" <br>
+3. Under the Build section <br>
+   - Choose the option 'Execute shell'
+   - Enter the command: echo "Welcome to Jenkins Demo"
 4. Save your job 
 5. Click on 'Build Now' to execute the job. 
 6. Check "console output"

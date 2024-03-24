@@ -66,3 +66,15 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 5. Click on 'Build Now' to execute the job. 
 6. Check "console output"
 
+### Test Jenkins Jobs to print date and time
+
+1. On Jenkins Dashboard click on “new item”
+2. Enter an item name – `My-Project`
+   - Chose `Freestyle` project
+3. Under the Build section <br>
+   - Choose the option 'Execute shell'
+   - Enter the command: echo $(date)
+4. Save your job 
+5. Click on 'Build Now' to execute the job. 
+6. Check "console output"
+   Note: Trigger the job multiple times to see the date and time 

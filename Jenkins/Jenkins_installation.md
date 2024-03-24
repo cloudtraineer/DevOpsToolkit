@@ -9,7 +9,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 
 
 ## Install Jenkins on EC2 (Amazon Linux 2)
- You can install jenkins using the rpm or by setting up the repo. We will set up the repo so that we can update it easily in the future.
+ You can install jenkins using the rpm or by setting up the repo. We will set up the repo to update it easily in the future.
    Get the latest version of jenkins from https://pkg.jenkins.io/redhat-stable/ and install
    ```sh
    sudo yum update –y 
@@ -20,7 +20,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    sudo yum install jenkins -y
    ```
 ## Install Jenkins on EC2 (Amazon Linux 2023)
- You can install jenkins using the rpm or by setting up the repo. We will set up the repo so that we can update it easily in the future.
+ You can install jenkins using the rpm or by setting up the repo. We will set up the repo to update it easily in the future.
    Get the latest version of jenkins from https://pkg.jenkins.io/redhat-stable/ and install
    ```sh
    sudo yum update –y 
@@ -60,8 +60,8 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 2. Enter an item name – `My-First-Project`
    - Chose `Freestyle` project
 3. Under the Build section 
-	i. Choose the option 'Execute shell'
-        ii. Enter the command : echo "Welcome to Jenkins Demo"
+	i. Choose the option 'Execute shell' <br>
+        ii. Enter the command: echo "Welcome to Jenkins Demo" <br>
 4. Save your job 
 5. Click on 'Build Now' to execute the job. 
 6. Check "console output"

@@ -77,4 +77,5 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 4. Save your job 
 5. Click on 'Build Now' to execute the job. 
 6. Check "console output"
-   Note: Trigger the job multiple times to see the date and time 
+
+<br>Note: Trigger the job multiple times to see the date and time 

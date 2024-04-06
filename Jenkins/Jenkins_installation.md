@@ -16,7 +16,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
    sudo amazon-linux-extras install epel
-   sudo amazon-linux-extras install java-openjdk11 -y
+   sudo amazon-linux-extras install java-openjdk11 -y   OR   sudo yum install java-17-amazon-corretto -y 
    sudo yum install jenkins -y
    ```
 ## Install Jenkins on EC2 (Amazon Linux 2023)
@@ -26,7 +26,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    sudo yum update –y 
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-   sudo dnf install java-11-amazon-corretto -y
+   sudo dnf install java-11-amazon-corretto -y  OR sudo yum install java-17-amazon-corretto
    sudo yum install jenkins -y
    ```
 

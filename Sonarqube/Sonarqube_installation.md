@@ -1,6 +1,6 @@
 # Sonarqube Setup
 
-SonarQube is an open-source static testing analysis software, that is used by developers to manage source code quality and consistency.
+SonarQube is an open-source static testing analysis software, that developers use to manage source code quality and consistency.
 ## 🧰 Prerequisites
 
 Source: https://docs.sonarqube.org/latest/requirements/requirements/
@@ -19,20 +19,20 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    cd /opt
    wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip
    ```
-1. extract packages
+2. extract packages
    ```sh 
    unzip /opt/sonarqube-7.9.1.zip
    ```
 
-2. Change ownership to the user and Switch to the Linux binaries directory to start the service
+3. Change ownership to the user and Switch to the Linux binaries directory to start the service
    ```bash
    useradd sonar
    groupadd sonar
    chown -R sonar:sonar /opt/sonarqube-7.9.1
    chmod -R 755 /opt/sonarqube-7.9.1
    ```
-3. Find the line RUN_AS_USER, uncomment it by removing the pound sign and enter sonar user as the value
-4. ```sh
+4. Find the line RUN_AS_USER, uncomment it by removing the pound sign and enter sonar user as the value
+   ```sh
    cd /opt/sonarqube-7.9.1/bin/linux-x86-64
    vi sonar.sh
    Edit the following line to match and save the file: RUN_AS_USER=sonar
@@ -40,7 +40,9 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    ./sonar.sh start
    ```
 5. Connect to the SonarQube server through the browser. It uses port 9000.   
-   `Note`: Port should be opened in the Security group 
+   `Note`: Port should be opened in the Security group <br>
+   Username: <b>admin</b>
+   Password: <b>admin</b>
    ```bash
    http://<Public-IP>:9000
    ```

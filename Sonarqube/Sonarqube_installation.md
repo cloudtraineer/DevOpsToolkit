@@ -5,12 +5,12 @@ SonarQube is an open-source static testing analysis software, that developers us
 
 Source: https://docs.sonarqube.org/latest/requirements/requirements/
 1. An EC2 instance with a minimum of 2 GB RAM (t2.small)  
-1. Java 11 installation   
+2. Java 11 installation   
    ```sh 
    amazon-linux-extras list
    amazon-linux-extras install java-openjdk11
    ```
-1. SonarQube cannot be run as root on Unix-based systems, so create a dedicated user account for SonarQube if necessary.
+3. SonarQube cannot be run as root on Unix-based systems, so create a dedicated user account for SonarQube if necessary.
 
 ## Installation steps
 
@@ -46,21 +46,4 @@ Source: https://docs.sonarqube.org/latest/requirements/requirements/
    ```bash
    http://<Public-IP>:9000
    ```
-# Integrate Sonarqube with Jenkins 
 
-## 🧰 Prerequisites
-1. a Sonarqube Server
-2. A Jenkins server
-
-Steps :- 
-### On Sonarqube server 
-
-1. Generate a sonarqube token to authenticate from Jenkins
-
-### On Jenkins server 
-
-1. Install Sonarqube plugin
-2. Configure Sonarqube credentials
-3. Add Sonarqube to jenkins "configure system"
-4. Install SonarScanner
-5. Run Pipeline job

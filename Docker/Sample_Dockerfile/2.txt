@@ -1,0 +1,19 @@
+#use an existing docker image
+#FROM --Instruction we want to use docker image as base
+FROM node:alpine
+
+#specifies the working directory for my file/folder inside docker
+WORKDIR /usr/app
+
+#copy the content from your machine present working
+#directory to the container file system
+COPY ./package.json ./ 
+
+#Download and istall a dependency
+#RUN apk add --update redis
+RUN npm install
+COPY ./ ./
+
+#tell the image what to do when it starts as a container  
+
+CMD ["npm", "start"]

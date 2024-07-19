@@ -5,12 +5,18 @@ SonarQube is an open-source static testing analysis software, that developers us
 
 Source: https://docs.sonarqube.org/latest/requirements/requirements/
 1. An EC2 instance with a minimum of 2 GB RAM (t2.small)  
-2. Java 11 installation   
-   ```sh 
+2. Java 11 installation
+   ```sh
+   [Amazon Linux 2]
    amazon-linux-extras list
    amazon-linux-extras install java-openjdk11
+
+   [Amazon Linux 2023]
+   sudo dnf install java-11-amazon-corretto -y
    ```
-3. SonarQube cannot be run as root on Unix-based systems, so create a dedicated user account for SonarQube if necessary.
+   
+   
+4. SonarQube cannot be run as root on Unix-based systems, so create a dedicated user account for SonarQube if necessary.
 
 ## Installation steps
 

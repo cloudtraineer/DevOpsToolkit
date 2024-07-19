@@ -46,6 +46,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    ```
    ![alt text](https://github.com/cloudtraineer/Installation_guide/blob/master/Jenkins/df_new.png?raw=true)
 
+## Configure Jenkins
 ### Start Jenkins
    ```sh
    # Start jenkins service

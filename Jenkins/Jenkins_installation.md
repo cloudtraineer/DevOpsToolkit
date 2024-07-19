@@ -32,19 +32,19 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    You need to increase the size of "tmpfs" location
    ```sh
    df -h
+   ```
    ![alt text](https://github.com/cloudtraineer/Installation_guide/blob/master/Jenkins/df.png?raw=true)
-   
+   ```sh
    # To increase the space on /tmp location follow the steps
    vi /etc/fstab
    
    # Paste the below line at the end of the file opened in pervious step
    tmpfs   /tmp         tmpfs   nodev,nosuid,size=2G          0  0
-   
+  
    # Save the file and Restart the server
    # Once the Server is rebooted verify the size has been increased to 2 GB
-   ![alt text](https://github.com/cloudtraineer/Installation_guide/blob/master/Jenkins/df_new.png?raw=true)
    ```
-   
+   ![alt text](https://github.com/cloudtraineer/Installation_guide/blob/master/Jenkins/df_new.png?raw=true)
 
 ### Start Jenkins
    ```sh

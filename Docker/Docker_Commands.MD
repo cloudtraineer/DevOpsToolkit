@@ -65,3 +65,17 @@ docker rm <container_id>
 ```sh
 docker exec -it <container_Name> /bin/bash
 ```
+
+13. Create Docker Volume
+```sh
+docker volume create my-vol
+```
+
+14. Mounting Docker volume to Container
+```sh
+docker run -it --mount source=<docker_volme_name>,destination=<destination-folder> -d <container-name>
+eg. 
+docker run -it --mount source=my-vol,destination=/usr/local/apache2 -d -p 80:80 httpd
+```
+
+

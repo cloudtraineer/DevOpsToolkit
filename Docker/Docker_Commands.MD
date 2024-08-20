@@ -74,8 +74,14 @@ docker volume create my-vol
 14. Mounting Docker volume to Container
 ```sh
 docker run -it --mount source=<docker_volme_name>,destination=<destination-folder> -d <container-name>
-eg. 
+eg.
 docker run -it --mount source=my-vol,destination=/usr/local/apache2 -d -p 80:80 httpd
 ```
 
 
+15. Mounting Host Folder(Bind mount) to Container
+```sh
+docker run -it --mount type=bind,source=<host_folder_path>,destination=<destination-folder> -d <container-name>
+eg.
+docker run -it --mount type=bind,source=/docker_volume,destination=/app -d -p 80:80 nginx
+```

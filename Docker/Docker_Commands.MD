@@ -68,7 +68,7 @@ docker exec -it <container_Name> /bin/bash
 
 13. Create Docker Volume
 ```sh
-docker volume create my-vol
+docker volume create <Volume_Name>
 ```
 
 14. Mounting Docker volume to container
@@ -84,4 +84,10 @@ docker run -it --mount source=my-vol,destination=/usr/local/apache2 -d -p 80:80 
 docker run -it --mount type=bind,source=<host_folder_path>,destination=<destination-folder> -d <container-name>
 eg.
 docker run -it --mount type=bind,source=/docker_volume,destination=/app -d -p 80:80 nginx
+```
+
+
+16. Fetch Container Details
+```sh
+docker inspect <container_Name>
 ```

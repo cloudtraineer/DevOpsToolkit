@@ -49,3 +49,5 @@ Git commands used 99% of the times with working flow:
 24. git branch: Lists branches.
 
 25. git reset-hard: Resets everything to a previous commit, erasing all uncommitted changes.
+
+![alt text](https://github.com/cloudtraineer/DevOpsToolkit/blob/master/GIT/GIT_Workflow.jpg?raw=true)

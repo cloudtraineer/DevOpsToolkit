@@ -32,7 +32,7 @@ docker run -d --name httpd_server -p 8080:80 httpd:2.2
 docker ps
 ```
 
-7. List out all docker container (running, stpooed, terminated, etc...)
+7. List out all docker container (running, stopped, terminated, etc...)
 ```sh
 docker ps -a
 ```

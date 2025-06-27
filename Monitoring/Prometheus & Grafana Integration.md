@@ -10,7 +10,6 @@ Showcase how Prometheus collects metrics and how Grafana visualizes them using a
 ## Pre-requisites
 
 - AWS account
-- Basic understanding of Linux commands
 - SSH key pair
 - Terminal or SSH client
 

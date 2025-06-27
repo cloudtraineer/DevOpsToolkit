@@ -149,3 +149,4 @@ stress --cpu 2 --timeout 60
 - All processes (Prometheus, Node Exporter) run in the background with `&`
 
 ---
+![image](https://github.com/user-attachments/assets/c446b70b-2f9d-45ad-89c7-2d7946fc418a)

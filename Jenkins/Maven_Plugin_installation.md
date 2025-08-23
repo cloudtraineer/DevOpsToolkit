@@ -31,11 +31,12 @@ So far we have completed the installation of maven software to support maven plu
 # Reboot the Jenkins Server
 ```
 
-<!-- 
-### Setup JDK on Jenkins console
-1. In Jenkins server, ensure that you have configured a JDK in the global tools configuration.
-   - `Go to Manage Jenkins` > `Global Tool Configuration` > `Install JDK`
+
+### Setup JDK on Jenkins console (Optional in case of Error)
  ```sh
  # If this JDK configuration is missing or misconfigured, Maven won't be able to find it, resulting in the NullPointerException.
 ```
--->
+1. In Jenkins server, ensure that you have configured a JDK in the global tools configuration.
+   - `Go to Manage Jenkins` > `Global Tool Configuration` > `Install JDK`
+
+

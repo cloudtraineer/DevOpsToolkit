@@ -55,16 +55,16 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    # Setup Jenkins to start at boot,
    chkconfig jenkins on
    ```
-### Setting up Java JDK 
-    ```sh
-    #Update Jenkins Home path in Environment
+### Setting up Java JDK
+```sh
+    # Add or Update Java Home path in Environment
     sudo systemctl edit jenkins
-    # Add or Update 
     Environment="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto"
-    #Reload Jenkins Service
+    
+    # Reload Jenkins Service
     sudo systemctl daemon-reexec
     sudo systemctl restart jenkins
-    ```
+```
 ### Accessing Jenkins
    By default jenkins runs at port `8080`, You can access jenkins at
    ```sh
@@ -78,8 +78,13 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 - `Install Suggested Plugin` Plugin Installation;
 - Change the admin password
    - `Admin` > `Configure` > `Password`
-- Configure `java` path
-  - `Manage Jenkins` > `Global Tool Configuration` > `JDK` 
+- Configure `Java` path (Mandatory)
+  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`
+  - `Click Add JDK` > `Give it a name (example: jdk17)` > `Set JAVA_HOME`
+     ```sh
+     /usr/lib/jvm/java-17-amazon-corretto
+     ```
+  - Uncheck Install automatically
 
 ### Test Jenkins Jobs
 1. On Jenkins Dashboard click on “new item”

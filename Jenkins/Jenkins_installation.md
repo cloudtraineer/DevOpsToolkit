@@ -57,13 +57,13 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    ```
 ### Setting up Java JDK
 ```sh
-    # Add or Update Java Home path in Environment
-    sudo systemctl edit jenkins
-    Environment="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto"
+# Add or Update Java Home path in Environment
+sudo systemctl edit jenkins
+Environment="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto"
     
-    # Reload Jenkins Service
-    sudo systemctl daemon-reexec
-    sudo systemctl restart jenkins
+# Reload Jenkins Service
+sudo systemctl daemon-reexec
+sudo systemctl restart jenkins
 ```
 ### Accessing Jenkins
    By default jenkins runs at port `8080`, You can access jenkins at

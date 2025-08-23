@@ -26,7 +26,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    sudo yum update –y 
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-   sudo dnf install java-11-amazon-corretto -y  OR sudo dnf install java-17-amazon-corretto -y
+   sudo dnf install java-11-amazon-corretto -y  OR sudo dnf install java-17-amazon-corretto-devel -y
    sudo yum install jenkins -y
    ```
    You need to increase the size of "tmpfs" location
@@ -55,7 +55,16 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    # Setup Jenkins to start at boot,
    chkconfig jenkins on
    ```
-
+### Setting up Java JDK 
+    ```sh
+    #Update Jenkins Home path in Environment
+    sudo systemctl edit jenkins
+    # Add or Update 
+    Environment="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto"
+    #Reload Jenkins Service
+    sudo systemctl daemon-reexec
+    sudo systemctl restart jenkins
+    ```
 ### Accessing Jenkins
    By default jenkins runs at port `8080`, You can access jenkins at
    ```sh

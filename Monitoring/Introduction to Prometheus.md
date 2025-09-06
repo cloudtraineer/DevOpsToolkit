@@ -43,8 +43,8 @@
    • **Data Retrieval Worker** - pulls metrics from targets  
    • **Web Server/API** - serves data to dashboards  
 
-**2. Targets** - Systems being monitored  
-**3. Metrics** - Units of measurement  
+**2. Targets** - Systems being monitored (Servers, Applications, Services )   
+**3. Metrics** - Units of measurement  (CPU Status, Memory & Disk Usage)
 
 
 ---

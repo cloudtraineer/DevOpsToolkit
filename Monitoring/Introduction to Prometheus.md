@@ -196,3 +196,4 @@ Prometheus is a **powerful monitoring solution** that:
 - Requires careful planning for **scaling and configuration**
 
 **Next Steps:** Deploy Prometheus in your environment and start with basic monitoring before expanding to custom metrics and complex dashboards.
+![alt text](https://signoz.io/img/guides/2024/07/what-is-prometheus-for-monitoring-Untitled.webp)

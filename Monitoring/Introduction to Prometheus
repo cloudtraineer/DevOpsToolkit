@@ -38,13 +38,14 @@
 
 **Main Components:**
 
-**1. Prometheus Server** (Core component)
+**1. Prometheus Server** (Core component) <br>
    • **Time Series Database** - stores metrics data  
    • **Data Retrieval Worker** - pulls metrics from targets  
    • **Web Server/API** - serves data to dashboards  
 
 **2. Targets** - Systems being monitored  
 **3. Metrics** - Units of measurement  
+
 
 ---
 

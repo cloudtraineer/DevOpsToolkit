@@ -65,7 +65,7 @@
 
 ---
 
-## 6: Metrics Collection Process
+## 6: Metrics Collection Process (Pulls over HTTP)
 
 **Requirements:**
 • Targets must expose **`/metrics` endpoint**  

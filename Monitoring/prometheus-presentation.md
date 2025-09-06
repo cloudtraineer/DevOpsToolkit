@@ -3,7 +3,7 @@
 
 ---
 
-## Slide 1: What is Prometheus?
+## 1: What is Prometheus?
 
 • **Modern monitoring tool** for dynamic container environments  
 • Works with **Kubernetes, Docker Swarm**, and traditional infrastructure  
@@ -12,7 +12,7 @@
 
 ---
 
-## Slide 2: Why Prometheus Matters
+## 2: Why Prometheus Matters
 
 • Modern DevOps infrastructure is **increasingly complex**  
 • **Hundreds of processes** running across multiple servers  
@@ -22,7 +22,7 @@
 
 ---
 
-## Slide 3: The Challenge: Complex Infrastructure Problems
+## 3: The Challenge: Complex Infrastructure Problems
 
 **Scenario:** Server runs out of memory → Container crashes → Database sync fails → Authentication service down → Users can't login
 
@@ -34,7 +34,7 @@
 
 ---
 
-## Slide 4: Prometheus Architecture
+## 4: Prometheus Architecture
 
 **Main Components:**
 
@@ -48,7 +48,7 @@
 
 ---
 
-## Slide 5: Prometheus Metrics Types
+## 5: Prometheus Metrics Types
 
 **Counter**
 • Counts events (e.g., number of requests, exceptions)  
@@ -64,7 +64,7 @@
 
 ---
 
-## Slide 6: Metrics Collection Process
+## 6: Metrics Collection Process
 
 **Requirements:**
 • Targets must expose **`/metrics` endpoint**  
@@ -77,7 +77,7 @@
 
 ---
 
-## Slide 7: Monitoring Custom Applications
+## 7: Monitoring Custom Applications
 
 **Prometheus Client Libraries:**
 • Available for multiple languages (**Node.js, Java, Python**, etc.)  
@@ -90,7 +90,7 @@
 
 ---
 
-## Slide 8: Pull Mechanism - Key Advantage
+## 8: Pull Mechanism - Key Advantage
 
 **Traditional Monitoring (Push):**
 • Services push metrics to monitoring system  
@@ -105,7 +105,7 @@
 
 ---
 
-## Slide 9: Prometheus Configuration
+## 9: Prometheus Configuration
 
 **prometheus.yaml file contains:**
 
@@ -119,7 +119,7 @@
 
 ---
 
-## Slide 10: Alert Manager
+## 10: Alert Manager
 
 **Functionality:**
 • Processes **alerts defined by rules**  
@@ -137,7 +137,7 @@
 
 ---
 
-## Slide 11: Data Storage & Querying
+## 11: Data Storage & Querying
 
 **Storage:**
 • **Local on-disk** time series database  
@@ -151,7 +151,7 @@
 
 ---
 
-## Slide 12: Key Characteristics
+## 12: Key Characteristics
 
 **Advantages:**
 • **Reliable and self-contained**  
@@ -167,24 +167,7 @@
 
 ---
 
-## Slide 13: Container Environment Integration
-
-**Docker & Kubernetes Compatibility:**
-• All components available as **Docker images**  
-• **Easy deployment** in container environments  
-
-**Kubernetes Integration:**
-• **Out-of-the-box** cluster node monitoring  
-• **Automatic metrics collection** from Kubernetes nodes  
-• **No extra configuration** needed for basic monitoring  
-
-**Deployment Options:**
-• **Helm charts** available  
-• **Operator pattern** support  
-
----
-
-## Slide 14: Best Practices
+## 13: Best Practices
 
 **Getting Started:**
 • Start with **basic infrastructure monitoring**  

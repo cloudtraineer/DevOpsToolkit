@@ -58,8 +58,13 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 ### Setting up Java JDK
 ```sh
 # Add or Update Java Home path in Environment
-sudo systemctl edit jenkins
+sudo mkdir -p /etc/systemd/system/jenkins.service.d
+sudo nano /etc/systemd/system/jenkins.service.d/override.conf
+
+[Service]
 Environment="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto"
+Environment="JAVA_ARGS=-Xms1024m -Xmx2048m"
+
     
 # Reload Jenkins Service
 sudo systemctl daemon-reexec

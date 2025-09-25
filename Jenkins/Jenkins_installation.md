@@ -119,6 +119,7 @@ sudo systemctl restart jenkins
      </VirtualHost>
     ```
    - Restart Jenkins Service and Http Service
+   - Change in `Jenkins` → `Manage Jenkins` → `Configure System` → `Jenkins URL` → `make sure it matches the proxy URL`
 ### Test Jenkins Jobs
 1. On Jenkins Dashboard click on “new item”
 2. Enter an item name – `My-First-Project`

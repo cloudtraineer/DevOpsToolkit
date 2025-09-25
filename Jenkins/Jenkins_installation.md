@@ -118,6 +118,7 @@ sudo systemctl restart jenkins
        RequestHeader set X-Forwarded-For %{REMOTE_ADDR}s
      </VirtualHost>
     ```
+   - Restart Jenkins Service and Http Service
 ### Test Jenkins Jobs
 1. On Jenkins Dashboard click on “new item”
 2. Enter an item name – `My-First-Project`

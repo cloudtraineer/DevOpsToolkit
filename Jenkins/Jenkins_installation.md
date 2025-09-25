@@ -69,6 +69,8 @@ Environment="JAVA_ARGS=-Xms1024m -Xmx2048m"
 # Reload Jenkins Service
 sudo systemctl daemon-reexec
 sudo systemctl restart jenkins
+# Confirm Changes in Path
+ps -ef | grep jenkins
 ```
 ### Accessing Jenkins
    By default jenkins runs at port `8080`, You can access jenkins at

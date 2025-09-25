@@ -86,6 +86,35 @@ sudo systemctl restart jenkins
      ```
   - Uncheck Install automatically
 
+### Reverse Proxy Error Fix
+1. Jenkins URL / Context Path
+   - Jenkins needs to know the external URL.
+   - Check in Jenkins → Manage Jenkins → Configure System → Jenkins URL → make sure it matches the proxy URL
+2. Proxy Headers
+   - Jenkins relies on X-Forwarded-For and X-Forwarded-Proto headers.If missing, redirects may break
+3. Apache Reverse Proxy
+   - Install Httpd on Jenkins Server
+   - Edit your **Jenkins Apache vhost file** ```(/etc/apache2/sites-available/jenkins.conf or /etc/httpd/conf.d/jenkins.conf)``` and add these lines:
+     ```
+     <VirtualHost *:80>
+       ServerName <EC2 public IP>
+
+       ProxyRequests Off
+       ProxyPreserveHost On
+       AllowEncodedSlashes NoDecode
+
+       <Proxy *>
+          Require all granted
+       </Proxy>
+
+       ProxyPass         /  http://127.0.0.1:8080/ nocanon
+       ProxyPassReverse  /  http://127.0.0.1:8080/
+       # Important headers for Jenkins
+       RequestHeader set X-Forwarded-Proto expr=%{REQUEST_SCHEME}
+       RequestHeader set X-Forwarded-Port expr=%{SERVER_PORT}
+       RequestHeader set X-Forwarded-For %{REMOTE_ADDR}s
+     </VirtualHost>
+    ```
 ### Test Jenkins Jobs
 1. On Jenkins Dashboard click on “new item”
 2. Enter an item name – `My-First-Project`

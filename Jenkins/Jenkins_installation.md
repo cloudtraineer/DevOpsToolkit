@@ -94,7 +94,7 @@ sudo systemctl restart jenkins
 ### Reverse Proxy Error Fix
 1. Jenkins URL / Context Path
    - Jenkins needs to know the external URL.
-   - Check in Jenkins → Manage Jenkins → Configure System → Jenkins URL → make sure it matches the proxy URL
+   - Check in `Jenkins` → `Manage Jenkins` → `Configure System` → `Jenkins URL` → `make sure it matches the proxy URL`
 2. Proxy Headers
    - Jenkins relies on X-Forwarded-For and X-Forwarded-Proto headers.If missing, redirects may break
 3. Apache Reverse Proxy

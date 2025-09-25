@@ -94,7 +94,7 @@ sudo systemctl restart jenkins
    - Jenkins relies on X-Forwarded-For and X-Forwarded-Proto headers.If missing, redirects may break
 3. Apache Reverse Proxy
    - Install Httpd on Jenkins Server
-   - Edit your **Jenkins Apache vhost file** ```sh(/etc/apache2/sites-available/jenkins.conf or /etc/httpd/conf.d/jenkins.conf)``` and add these lines:
+   - Edit your **Jenkins Apache vhost file** ```(/etc/apache2/sites-available/jenkins.conf or /etc/httpd/conf.d/jenkins.conf)``` and add these lines:
    ```sh
      <VirtualHost *:80>
        ServerName <EC2 public IP>

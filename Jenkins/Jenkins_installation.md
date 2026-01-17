@@ -62,7 +62,7 @@ sudo mkdir -p /etc/systemd/system/jenkins.service.d
 sudo nano /etc/systemd/system/jenkins.service.d/override.conf
 
 [Service]
-Environment="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto"
+Environment="JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto"
 Environment="JAVA_ARGS=-Xms1024m -Xmx2048m"
 
     
@@ -89,7 +89,7 @@ ps -ef | grep jenkins
   - `Manage Jenkins` > `Global Tool Configuration` > `JDK`
   - `Click Add JDK` > `Give it a name (example: jdk17)` > `Set JAVA_HOME`
      ```sh
-     /usr/lib/jvm/java-17-amazon-corretto
+     /usr/lib/jvm/java-21-amazon-corretto
      ```
   - Uncheck Install automatically
 

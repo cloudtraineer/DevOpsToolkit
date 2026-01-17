@@ -2,7 +2,7 @@
 ### Pre-requisites
 1. EC2 instance with Java 11
     ```sh
-    sudo yum install java-11-amazon-corretto-headless
+    sudo dnf install java-21-amazon-corretto-devel -y
     ```
 ### Install Apache Tomcat
 1. Download tomcat packages from  https://tomcat.apache.org/download-80.cgi onto /opt on EC2 instance
@@ -10,7 +10,7 @@
    ```sh 
    # Create tomcat directory
    cd /opt 
-   wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.95/bin/apache-tomcat-8.5.95.tar.gz
+   wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz
    tar -xvzf apache-tomcat-<version>.tar.gz
    ```
 1. give executing permissions to startup.sh and shutdown.sh which are under bin. 

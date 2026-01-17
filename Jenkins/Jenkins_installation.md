@@ -25,8 +25,8 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    ```sh
    sudo yum update –y 
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-   sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-   sudo dnf install java-11-amazon-corretto -y  OR sudo dnf install java-17-amazon-corretto-devel -y
+   sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2026.key
+   sudo dnf install java-21-amazon-corretto-devel -y
    sudo yum install jenkins -y
    ```
    You need to increase the size of "tmpfs" location

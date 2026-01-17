@@ -30,6 +30,7 @@ So far we have completed the installation of maven software to support maven plu
   - `Click Add Maven: ` > `Name: Maven` > `Check Install automatically` > `Version: 3.x.x (latest)`
 ```sh
 # Reboot the Jenkins Server
+#In case of java version mistach issue use the command "/usr/sbin/alternatives --config java" to select correct java version
 ```
 
 

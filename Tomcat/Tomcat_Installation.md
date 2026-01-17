@@ -2,7 +2,7 @@
 ### Pre-requisites
 1. EC2 instance with Java 11
     ```sh
-    sudo yum install java-11-amazon-corretto-headless
+    sudo yum install java-11-amazon-corretto-headless  or sudo yum install java-17-amazon-corretto -y 
     ```
 ### Install Apache Tomcat
 1. Download tomcat packages from  https://tomcat.apache.org/download-80.cgi onto /opt on EC2 instance

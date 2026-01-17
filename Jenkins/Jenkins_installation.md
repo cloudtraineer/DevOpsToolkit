@@ -87,7 +87,7 @@ ps -ef | grep jenkins
    - `Admin` > `Configure` > `Password`
 - Configure `Java` path (Mandatory)
   - `Manage Jenkins` > `Global Tool Configuration` > `JDK`
-  - `Click Add JDK` > `Give it a name (example: jdk17)` > `Set JAVA_HOME`
+  - `Click Add JDK` > `Give it a name (example: jdk21)` > `Set JAVA_HOME`
      ```sh
      /usr/lib/jvm/java-21-amazon-corretto
      ```

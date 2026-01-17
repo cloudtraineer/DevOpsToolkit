@@ -39,7 +39,7 @@
  - *Post-build Actions*
    - Deploy war/ear to container
       - WAR/EAR files : `**/*.war`
-      - Containers : `Tomcat 8.x`
+      - Containers : `Tomcat 9.x`
          - Credentials: `deployer` (user created on above)
          - Tomcat URL : `http://<PUBLIC_IP>:8080`
 

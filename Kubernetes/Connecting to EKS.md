@@ -160,5 +160,3 @@ Example:
     - system:masters
 ```
 
-
-Role-based authentication.

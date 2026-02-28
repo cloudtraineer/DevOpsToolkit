@@ -79,9 +79,8 @@ You should see the IAM Role ARN in the output.
 ### Install kubectl
 
 ``` bash
-curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/latest/2023-11-14/bin/linux/amd64/kubectl
-chmod +x kubectl
-sudo mv kubectl /usr/local/bin/
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
 
@@ -119,7 +118,21 @@ Configures kubectl authentication using IAM Role
 
 ------------------------------------------------------------------------
 
-## Step 5: Verify Connection
+## Step 5: MAP IAM Role
+
+1.  Go to AWS Console → EKS → Cluster
+2.  Select your EKS cluster
+3.  Click **Access → Create**
+4.  Enter the IAM role name under IAM principal ARN
+5.  Select Type as Standard
+6.  Select Policy as AmazonEKSAdminPolicy and Access scope as Cluster
+7.  Click on "Add Policy"
+8.  Save changes
+
+
+------------------------------------------------------------------------
+
+## Step 6: Verify Connection
 
 ``` bash
 kubectl get nodes
@@ -129,7 +142,7 @@ If configured correctly, worker nodes will appear in **Ready** state.
 
 ------------------------------------------------------------------------
 
-## Step 6: Map IAM Role in aws-auth (If Unauthorized Error)
+## Step 7: Map IAM Role in aws-auth (If Unauthorized Error)
 
 If you get:
 

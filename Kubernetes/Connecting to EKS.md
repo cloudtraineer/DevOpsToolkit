@@ -14,18 +14,15 @@ EC2 (IAM Role Attached) → AWS CLI → EKS API Server → Worker Nodes
 
 ## Prerequisites
 
--   An existing EKS Cluster
+-   Existing EKS Cluster. 
 -   An EC2 instance (Amazon Linux 2 / 2023 recommended)
 -   IAM Role attached to EC2 with the following permissions:
-
-### Required IAM Policies
-
-Attach these policies to the EC2 IAM Role:
-
--   AmazonEKSClusterPolicy
--   AmazonEKSWorkerNodePolicy (if needed)
--   AmazonEC2ContainerRegistryReadOnly
-
+     ### Required IAM Policies
+      Attach these policies to the EC2 IAM Role:
+      - AmazonEKSClusterPolicy
+      -   AmazonEKSWorkerNodePolicy
+      -   AmazonEC2ContainerRegistryReadOnly (if Needed)
+ 
 For admin-level kubectl access, ensure the IAM Role is mapped in the
 `aws-auth` ConfigMap.
 
@@ -43,7 +40,13 @@ For admin-level kubectl access, ensure the IAM Role is mapped in the
 
 ------------------------------------------------------------------------
 
-## Step 2: SSH into EC2 Instance
+## Step 2: Whitelist Secuirty Group
+
+Allow EC2 Secuirty group under the EKS Cluster Secuirty Group , will All Traffic Permisions
+
+------------------------------------------------------------------------
+
+## Step 3: SSH into EC2 Instance
 
 ``` bash
 ssh -i your-key.pem ec2-user@<EC2-Public-IP>
@@ -51,7 +54,7 @@ ssh -i your-key.pem ec2-user@<EC2-Public-IP>
 
 ------------------------------------------------------------------------
 
-## Step 3: Install Required Tools
+## Step 4: Install Required Tools
 
 ### Update System
 
@@ -96,7 +99,7 @@ eksctl version
 
 ------------------------------------------------------------------------
 
-## Step 4: Update kubeconfig Using IAM Role
+## Step 5: Update kubeconfig Using IAM Role
 
 Since EC2 has an IAM Role attached, no manual AWS configuration is
 required.
@@ -118,7 +121,7 @@ Configures kubectl authentication using IAM Role
 
 ------------------------------------------------------------------------
 
-## Step 5: MAP IAM Role
+## Step 6: MAP IAM Role
 
 1.  Go to AWS Console → EKS → Cluster
 2.  Select your EKS cluster
@@ -132,7 +135,7 @@ Configures kubectl authentication using IAM Role
 
 ------------------------------------------------------------------------
 
-## Step 6: Verify Connection
+## Step 7: Verify Connection
 
 ``` bash
 kubectl get nodes
